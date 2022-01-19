@@ -49,7 +49,7 @@ console.log('Antra islaida:', antraIslaida);
 pinigine = pinigine - antraIslaida;
 console.log('Pinigineje yra:', pinigine);
 
-console.log('----------------');
+c
 
 const pirmasZodis = 'Senis';
 const antrasZodis = 'besmegenis';

@@ -1,9 +1,3 @@
- 
-
-
-
-
-
 // Susumuoti visus skaičiaus tipo kintamuosius
 // Rezultatą išvesti į console
 const a1 = 2;
@@ -90,3 +84,4 @@ console.log(mokiniuSkaicius)
 
 const mokiniuVardai = `Mokiniu vardai yra ${asmuo1}, ${asmuo2}, ${asmuo3}, ${asmuo4}.`;
 console.log(mokiniuVardai)
+
