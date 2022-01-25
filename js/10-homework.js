@@ -230,4 +230,130 @@ for(let i=0; i<=11; i++)
      modulis3++;}
 
     console.log(modulis3);
-    
+
+console.log ('------------------------------')
+    function Name(id){
+        var name;
+        switch(id){
+          case 1:
+            name = 'Mercury'
+            break
+          case 2:
+            name = 'Venus'
+            break
+          case 3:
+            name = 'Earth'
+            break
+          case 4:
+            name = 'Mars'
+            break
+          case 5:
+            name = 'Jupiter'
+            break
+          case 6:
+            name = 'Saturn'
+            break
+          case 7:
+            name = 'Uranus'
+            break
+          case 8:
+            name = 'Neptune'
+        }
+        return name;
+      }
+
+      
+      console.log(Name(2));
+console.log(Name(5));
+console.log(Name(3));
+
+function check(a, x) {
+     return  a.includes(x); }
+  
+
+  console.log(check([66, 101], 66), );
+    console.log(check([101, 45, 75, 105, 99, 107], 107), );
+    console.log(check(['t', 'e', 's', 't'], 'e'),);
+    console.log(check(['what', 'a', 'great', 'kata'], 'kat'), );
+
+const arr = [1,-4,7,12]
+
+
+    function positiveSum(arr) {
+        let sum = 0;
+        for(let i = 0; i < arr.length; i++) {
+            if(arr[i] > 0) sum += arr[i]
+        }
+        return sum;
+        
+      }
+     
+      console.log(arr)
+
+      function arrayMadness(a, b) {
+        let sumA = 0;
+        console.log(a.length)
+        for (let i=0; i<a.length ; i++) {
+          sumA = sumA + Math.pow(a[i], 2)
+          console.log(sumA)
+        }
+        console.log(sumA)
+        let sumB = 0;
+        for (let i=0; i<b.length ; i++){
+          sumB = sumB+Math.pow(b[i], 3)
+        }
+        console.log(sumB)
+      
+        return sumA > sumB 
+      }
+      console.log(arrayMadness([4,5,6],[1,2,3]))
+
+      function correctPolishLetters (string) {
+        var dict = {'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź':'z','ż':'z'};
+        return string.replace(/[ąćęłńóśźż]/g, match => dict[match]);
+      }
+      console.log('---------------------------------------')
+
+      function strCount(str, letter){  
+        return str.split(letter).length-1}
+
+        console.log(strCount('Hello', 'o'), 1);
+console.log(strCount('Hello', 'l'), 2);
+console.log(strCount('', 'z'), 0)
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+        return (mpg * fuelLeft >= distanceToPump)
+    }
+   
+  
+  console.log(zeroFuel(50, 25, 2), true);
+    console.log(zeroFuel(100, 50, 1), false);
+
+
+console.log('---------------------------------------')
+
+
+function differenceInAges(ages){
+    return [Math.min(...ages), Math.max(...ages), Math.max(...ages)-Math.min(...ages)];
+}
+
+
+console.log(differenceInAges([82, 15, 6, 38, 35]),  [6, 82, 76] )
+console.log(differenceInAges([57, 99, 14, 32]),  [14, 99, 85] ) 
+
+function getDrinkByProfession(param){
+    switch(param.toLowerCase()){
+        case "Jabroni" : return	"Patron Tequila"
+        case "School Counselor":return "Anything with Alcohol"
+        case "programmer": return "Hipster Craft Beer"
+        case "bike gang member": return "Moonshine" 
+        case "politician": return "Your tax dollars" 
+        case "rapper":  return "Cristal" 
+      default: return "Beer"
+    }}
+
+      console.log(getDrinkByProfession("jabrOni"), "Patron Tequila", "'Jabroni' should map to 'Patron Tequila'");
+console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol", "'School Counselor' should map to 'Anything with alcohol'");
+console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
+console.log(getDrinkByProfession("bike ganG member"), "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
+console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars", "'Politician' should map to 'Your tax dollars'");

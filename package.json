@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cdw": "nodemon ./js/codewars/01-cw.js",
     "dev": "nodemon ./js/01-variables.js",
     "dev1": "nodemon ./js/02-array.js",
     "dev2": "nodemon ./js/03-homework.js",
@@ -11,6 +12,12 @@
     "dev4": "nodemon ./js/04-switch.js",
     "dev5": "nodemon ./js/05-for.js",
     "dev6": "nodemon ./js/10-homework.js",
+    "dev7": "nodemon ./js/06-operators.js",
+    "dev8": "nodemon ./js/07-function.js",
+    "dev9": "nodemon ./js/08-daugyba.js",
+    "dev10": "nodemon ./js/09-count.js",
+    "dev11": "nodemon ./js/11-max.js",
+    "dev12": "nodemon ./js/12-object.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
