@@ -357,3 +357,238 @@ console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol", "
 console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
 console.log(getDrinkByProfession("bike ganG member"), "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
 console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars", "'Politician' should map to 'Your tax dollars'");
+
+console.log('------------------------------------------------');
+
+/*
+Funkcija pavadinimu “isrinktiRaides”:
+priima du kintamuosius:
+pirmasis nurodo tekstą, su kuriuo reikės atlikti užduotį
+antrasis nurodo kas kelintą raidę išrinkti
+patikrinti, ar pirmasis kintamasis yra teksto tipo:
+jei ne, išvedame pranešimą “Pirmasis kintamasis yra netinkamo tipo.”
+priešingu atveju tęsiame darbą
+patikrinti, ar pirmasis kintamasis yra ne tuščias tekstas ir ne didesnis nei 100 simbolių:
+jei ne, išvedame pranešimą “Pirmojo kintamojo reikšmė yra netinkamo dydžio.”
+priešingu atveju tęsiame darbą
+patikrinti, ar antrasis kintamasis yra skaičiaus tipo:
+jei ne, išvedame pranešimą “Antrasis kintamasis yra netinkamo tipo.”
+priešingu atveju tęsiame darbą
+patikriname, ar antrojo kintamojo vertė yra didesnė už nulį:
+jei ne, išvedame pranešimą “Antrasis kintamasis turi būti didesnis už nulį.”
+priešingu atveju tęsiame darbą
+patikriname, ar antrojo kintamojo vertė yra ne didesnė už pirmojo kintamojo ilgį:
+jei ne, išvedame pranešimą “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.”
+priešingu atveju tęsiame darbą
+išrenkame iš nurodyto teksto kas kelintą raidę (pagal antrojo kintamojo žingsnį)
+išrinktas raides sudėti į atskirą kintamąjį, kuris yra teksto tipo
+gražina rezultatą
+TESTAI:
+console.log( isrinktiRaides( “abcdefg”, 2 ) );
+rezultatas: “bdf”
+console.log( isrinktiRaides( “abcdefghijkl”, 3 ) );
+rezultatas: “cfil”
+console.log( isrinktiRaides( “abc”, 0 ) );
+rezultatas: “Antrasis kintamasis turi būti didesnis už nulį.”
+console.log( isrinktiRaides( “abc”, 4 ) );
+rezultatas: “Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.”
+console.log( isrinktiRaides( 1561, 2 ) );
+rezultatas: “Pirmasis kintamasis yra netinkamo tipo.”
+*/
+
+function isrinktiRaides(a, b) {
+    const c = textCheck (a);
+    switch (c){
+    case 1:
+        return `Pirmasis kintamasis yra netinkamo tipo.`
+        break
+    case 2:
+        return `Pirmojo kintamojo reikšmė yra netinkamo dydžio.`
+        break    
+    }
+    const d = numCheck (b);
+    switch (d){
+        case 1:
+            return `Antrasis kintamasis yra netinkamo tipo.`
+            break
+        case 2:
+            return `Antrasis kintamasis turi būti didesnis už nulį`
+            break          
+    }  if (a.length < b){
+        return `Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.`
+    } else {
+        let newstring = "";
+        for (let i = b - 1; i < a.length; i = i + b) {
+            const symbol = a[i];
+            newstring = newstring + symbol;
+            
+        }
+        return newstring
+    }
+}function textCheck(texttext){
+if (typeof texttext !== "string") {   
+return 1
+} else {
+    if (texttext.length > 0 &&  texttext.length <= 100){
+        return 3;
+    } else {
+        return 2;
+    }
+}   
+}
+
+function numCheck(numberNumber){
+    if (typeof numberNumber !== "number" || numberNumber % 1 !== 0) {
+    return 1
+    } else {
+        if (numberNumber > 0){
+            return 3;
+        } else {
+            return 2;
+        }
+    }   
+    
+}
+
+console.log( isrinktiRaides( `abcdefg`, 2 ) );
+console.log( isrinktiRaides( `abcdefghijkl`, 3 ) );
+console.log( isrinktiRaides( `abc`, 0 ) );
+console.log( isrinktiRaides( `abc`, 4 ) );
+console.log( isrinktiRaides( 1561, 2 ) );
+
+/*
+Funkcija pavadinimu “dalyba”:
+turi priimti du kintamuosius
+reikia sugalvoti ir įgyvendinti kuo daugiau logiškų patikrinimų, kurie padėtų apsaugoti funkciją nuo neteisingo panaudojimo
+esant blogoms sąlygoms, išvesti atitinkamą pranešimą
+esant geroms - tęsti darbą
+į atskirą kintamąjį išsaugoti apskaičiuotą dviejų skaičių dalybos reikšmę
+daliname pirmąjį skaičių iš antrojo
+gražinti suskaičiuotą reikšmę
+TESTAI:
+sugalvoti bent 5 testus, kurie bendrai iš esmės patvirtintu gerą funkcijos veikimą
+*/
+
+function dalyba(v,b){
+const rezultatas = v / b;
+if(typeof v !== 'number' && typeof b !== 'number'){
+    return 'error'
+}
+if(isFinite(Number)){
+    return 'bg'
+}
+return rezultatas;}
+
+console.log(2," ", dalyba(35, 0));
+console.log(3, " ", dalyba(42.7, NaN));
+console.log(4, " ", dalyba(42.7, -37));
+console.log(5, " ", dalyba(4e5, false));
+console.log(6, " ", dalyba(43, "asfdgf"));
+console.log(7, " ", dalyba("i", 12));
+console.log(8, " ", dalyba(12, 4));
+
+console.log('-------------------------------------------------------------')
+
+
+
+function solution(str){
+    let newWord = ''; 
+    for (let i =str.lenght -1; i>=0; i--)
+      newWord +=str[i];
+      return newWord;
+      
+    
+  }
+  
+  console.log(solution('world'), 'dlrow');
+    console.log(solution('hello'), 'olleh');
+    console.log(solution(''), '');
+    console.log(solution('h'), 'h');
+
+    /*Convert number to reversed array of digits
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.*/
+
+function digitize(n) {
+    const arrayNumReverse = String(n).split('').map(Number).reverse()
+    return arrayNumReverse;
+  }
+
+  console.log(digitize(35231),[1,3,2,5,3]);
+
+
+ /* It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string.
+   You're given one parameter, the original string. You don't have to worry with strings with less than two characters.*/
+
+   function removeChar(str){
+    let remove = ''
+   for(let i = 1; i < str.length - 1; i++){
+      remove += str[i];
+   }
+    return remove;
+    
+  
+  };
+ console.log(removeChar('eloquent'), 'loquen');
+   console.log(removeChar('country'), 'ountr');
+   console.log(removeChar('person'), 'erso');
+   console.log(removeChar('place'), 'lac');
+   console.log(removeChar('ooopsss'), 'oopss');
+
+
+  /* Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+Return your answer as a number. */
+
+function sumMix(x){
+    let sum = 0;
+    for (i = 0; i < x.length; i++) {
+      sum += Number(x[i]);
+    }
+    return sum;
+  }
+
+
+
+  console.log(sumMix([9, 3, '7', '3']), 22);
+  console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42); 
+  console.log(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 41); 
+  
+  /*Given an array of integers, return a new array with each value doubled.
+
+For example:
+
+[1, 2, 3] --> [2, 4, 6]*/
+
+function maps(x){
+    let sum = [];
+    for(let i = 0; i < x.length; i++){
+       sum.push(x[i] * 2);
+    }
+  return sum;
+  }
+
+  console.log(maps('[1, 2, 3]'), [2, 4, 6]);
+    console.log(maps([4, 1, 1, 1, 4]), [8, 2, 2, 2, 8]); 
+    console.log(maps([2, 2, 2, 2, 2, 2]), [4, 4, 4, 4, 4, 4]);
+
+    /*You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
+
+As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+
+For example:*/
+
+
+function monkeyCount(n) {
+    let sum = [];
+      for( let i = 1; i <= n; i++ ){
+        sum.push(i)
+      }
+      return sum;
+    }
+
+    console.log((monkeyCount(5)), [1, 2, 3, 4, 5]);
+    console.log((monkeyCount(3)), [1, 2, 3]);
+    console.log((monkeyCount(9)), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    console.log((monkeyCount(10)), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    console.log((monkeyCount(20)), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+  

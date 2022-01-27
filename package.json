@@ -18,6 +18,8 @@
     "dev10": "nodemon ./js/09-count.js",
     "dev11": "nodemon ./js/11-max.js",
     "dev12": "nodemon ./js/12-object.js",
+    "dev13": "nodemon ./js/14-array-object.js",
+    "dev14": "nodemon ./js/15-loops.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
