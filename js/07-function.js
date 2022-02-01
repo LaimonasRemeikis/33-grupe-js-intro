@@ -33,5 +33,4 @@ console.log(d);
 console.log(a, b, ' = ', r1);
 console.log(b, c, ' = ', r1);
 console.log(a, b, ' = ', r1);
-console.log(a, b, ' = ', r1);
-
+console.log(a, b, ' = ', r

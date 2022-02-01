@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cdw": "nodemon ./js/codewars/01-cw.js",
+    "cw": "nodemon ./cw/01-cw.js",
     "dev": "nodemon ./js/01-variables.js",
     "dev1": "nodemon ./js/02-array.js",
     "dev2": "nodemon ./js/03-homework.js",

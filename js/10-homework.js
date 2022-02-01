@@ -592,3 +592,171 @@ function monkeyCount(n) {
     console.log((monkeyCount(10)), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     console.log((monkeyCount(20)), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
   
+
+    
+
+
+
+
+    
+
+    /*
+Funkcijos:
+- masyvo ilgi
+- teksto ilgi
+- pirma teksto raide
+- paskutine teksto raide
+- vidurine teksto raide
+- triju skaiciu vidurki
+- pasisveikinimo sakinys, kur duodamas tik vardas: "Sveiki, as esu [Vardenis]!"
+*/
+console.log('---------')
+
+//MASYVO ILGIO SKAICIAVIMO BUDAI
+function arrIlgis(arr) {
+    return arr.length;
+  }
+  console.log(arrIlgis([4,5,6,9,8]))
+  
+  console.log('---------')
+  const arrIlgis2 = (array) => array.length
+  console.log(arrIlgis2([2,5,6]))
+
+  console.log('---------')
+
+  const arrIlgis1 = function(array){
+      return array.length;
+  }
+  console.log(arrIlgis1([2,6,5,9,8,7,2,3]))
+
+  console.log('---------')
+
+  //TEKSTO ILGIO SKAICIAVIMO BUDAI
+
+  function tekstoIlgis(text){
+      return text.length;
+  }
+  console.log(tekstoIlgis('labas vakaras'))
+
+  console.log('---------')
+
+  const tekstoIlgis2 = function(text){
+      return text.length
+  }
+  console.log(tekstoIlgis2('skani arbata'))
+  console.log('---------')
+
+  const tekstoIlgis3 = (text) => text.length
+  console.log(tekstoIlgis3('grazios dienos!'))
+  console.log('---------')
+
+  //Pirma teksto raide
+
+  function firstL(text){
+      return text.charAt(0)
+  }
+console.log(firstL('hahaha'))
+console.log('---------')
+
+const FirstL1 = function(text){
+    return text.charAt(0)
+    
+}
+console.log(FirstL1('juokelis'))
+
+console.log('----------')
+
+const firstL2 = (text) => text.charAt(0)
+console.log(firstL2('google'))
+
+console.log('----------')
+//- paskutine teksto raide
+
+function lastL(text){
+    return text.substr(text.length -1)
+}
+console.log(lastL('google'))
+console.log('----------')
+
+const lastL1 = function(text){
+    return text.substr(text.length -1)
+}
+console.log(lastL1('random'))
+console.log('----------')
+
+const lastL2 = (text) => text.substr(text.length -1)
+console.log(lastL2('fakeid'))
+console.log('----------')
+
+//- vidurine teksto raide
+// - math.ceil --> suapvalina netoks tikslus apvalina i virsu , Math.round tisklesnis
+function middleL(str){
+    return str.substr(Math.round(str.length / 2 - 1),str.length % 2 === 0 ? 2 :1);
+}
+console.log(middleL('masina'))
+
+console.log('----------')
+
+const middleL1 = function(str){
+    return str.substr(Math.round(str.length / 2 - 1),str.length % 2 === 0 ? 2 :1);
+}
+console.log(middleL1('taxi'))
+
+console.log('----------')
+
+const middleL2 = (str) => str.substr(Math.round(str.length / 2 - 1),str.length % 2 === 0 ? 2 :1);
+
+console.log(middleL2('trupiniai'))
+console.log('----------')
+
+//- triju skaiciu vidurki
+
+function average(a, b, c){
+    return (a+b+c)/3
+}
+const average1 = function (a, b, c){
+    return (a+b+c)/3
+}
+const average2 = (a, b, c) =>{
+    return (a+b+c)/3
+}
+const average3 = (a, b, c) => (a+b+c)/3
+
+console.log(average(3, 9, 27));
+console.log(average1(3, 9, 27));
+console.log(average2(3, 9, 27));
+console.log(average3(3, 9, 27));
+
+console.log('----------')
+
+//- pasisveikinimo sakinys, kur duodamas tik vardas: "Sveiki, as esu [Vardenis]!"
+
+function pasisveikinimas(vardas){
+    return `Sveiki, as esu ${vardas}!`
+}
+const pasisveikinimas1 = function(vardas){
+    return `Sveiki, as esu ${vardas}!`
+}
+const pasisveikinimas2 = (vardas) => {
+    return `Sveiki, as esu ${vardas}!`
+}
+const pasisveikinimas3 = (vardas) => `Sveiki, as esu ${vardas}!`;
+
+console.log(pasisveikinimas(`Laimonas`));
+console.log(pasisveikinimas1(`Laimonas`));
+console.log(pasisveikinimas2(`Laimonas`));
+console.log(pasisveikinimas3(`Laimonas`));
+
+
+var orderedCount = function (text) {
+    let array = [];
+  for(i = 0; i<text.lenght; i++){
+    if(array[text[i]]){
+      array[text[i]] += array[text[i]];
+    }else{
+      array[text[i]] = 1;
+    }
+  }
+    return array[text[i]] ;
+  }
+ console.log(orderedCount('abracadabra'))
